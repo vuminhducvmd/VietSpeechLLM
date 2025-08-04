@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vietnamese TTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <img src="assets/A_STAR_logo.png" alt="A*STAR" class="logo" />
+    <button id="toggle-theme" class="theme-toggle" aria-label="Toggle Dark Mode">💡</button>
+  </div>
+
+  <header>
+    <h1>VietSpeechLLM</h1>
+    <p class="authors">
+      Vu Minh Duc<sup>1,2</sup>, Nguyen Van Anh Tuan<sup>1</sup>, Tran Huy Dat<sup>1</sup>
+    </p>
+    <p class="institutions">
+      <sup>1</sup>A*STAR - Institute for Infocomm Research<br>
+      <sup>2</sup>National University of Singapore
+    </p>
+    <div class="links">
+      <a href="#" target="_blank">ArXiv</a> | 
+      <a href="#" target="_blank">GitHub</a> | 
+      <a href="#" target="_blank">HuggingFace</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        <!-- Placeholder abstract text -->
+        We present VietSpeechLLM, a scalable and multilingual-friendly speech language model tailored for the Vietnamese domain. Our system supports multi-speaker synthesis with the unique capability of dynamically selecting speaker identity based on text semantics, style, or intent — without explicit speaker prompts. By conditioning speech generation on both linguistic and latent semantic cues, the model adapts its prosody and speaker characteristics in a context-aware manner. While focused on Vietnamese, our approach is architecturally extensible to other low-resource or code-switching language scenarios. We demonstrate natural and diverse synthesized speech across various voices and registers, and showcase the potential of Speech LLMs in controllable, language-adaptive text-to-speech.
+      </p>
+      <figure>
+        <img src="assets/model_architecture.png" alt="Model Architecture Diagram (Placeholder)" />
+        <figcaption>Figure: Model architecture.</figcaption>
+      </figure>
+    </section>
+
+    <section id="demo">
+      <h2>Demo</h2>
+      <div id="sample-list">
+        <!-- Audio samples will be injected here by script -->
+      </div>
+    </section>
+  </main>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
