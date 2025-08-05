@@ -8,6 +8,12 @@ body {
   padding-top: 60px; /* Avoid content hidden by topbar */
 }
 
+/* Dark Mode Base */
+body.dark-mode {
+  background: #000000;
+  color: #ffffff;
+}
+
 /* Fixed minimalist topbar */
 .topbar {
   position: fixed;
@@ -60,6 +66,9 @@ header .authors {
   font-style: italic;
   color: #555;
 }
+body.dark-mode header .authors {
+  color: #bbb;
+}
 header .institutions {
   font-size: 0.85rem;
   color: #777;
@@ -67,10 +76,16 @@ header .institutions {
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
 }
+body.dark-mode header .institutions {
+  color: #aaa;
+}
 header .links a {
   margin: 0 0.5em;
   text-decoration: none;
   color: #0066cc;
+}
+body.dark-mode header .links a {
+  color: #88bbff;
 }
 
 /* Abstract section */
@@ -96,7 +111,7 @@ body.dark-mode #abstract figure img {
 
 /* Demo section */
 #demo {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -105,6 +120,61 @@ body.dark-mode #abstract figure img {
   flex-direction: column;
   gap: 1rem;
 }
+
+/* Comparison layout */
+.sample-comparison {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: #fefefe;
+}
+body.dark-mode .sample-comparison {
+  border-color: #444;
+  background: #1a1a1a;
+}
+.sample-text {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #000;
+}
+body.dark-mode .sample-text {
+  color: #eee;
+}
+.comparison-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+.comparison-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+  max-width: 300px;
+  background: #fafafa;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+body.dark-mode .comparison-column {
+  background: #2c2c2c;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+.comparison-column p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #222;
+}
+body.dark-mode .comparison-column p {
+  color: #ccc;
+}
+body.dark-mode .comparison-column audio {
+  filter: brightness(0.9);
+}
+
+/* Legacy demo style (if still used) */
 .sample {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -120,14 +190,24 @@ body.dark-mode #abstract figure img {
   font-style: italic;
   color: #333;
 }
+body.dark-mode .sample {
+  border-color: #555;
+  background: #1a1a1a;
+}
+body.dark-mode .sample .speaker {
+  color: #bbb;
+}
 
-/* Footer (if used elsewhere) */
+/* Footer */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   background: #f8f8f8;
+}
+body.dark-mode footer {
+  background: #111;
 }
 footer .logo {
   max-height: 40px;
@@ -139,31 +219,25 @@ footer .logo {
   border: none;
   border-radius: 4px;
 }
-
-/* Dark mode overrides */
-body.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
-}
-body.dark-mode header .authors {
-  color: #ccc;
-}
-body.dark-mode header .institutions {
-  color: #aaa;
-}
-body.dark-mode header .links a {
-  color: #9bbcff;
-}
-body.dark-mode .sample {
-  border-color: #555;
-}
-body.dark-mode .sample .speaker {
-  color: #bbb;
-}
-body.dark-mode footer {
-  background: #333;
-}
 body.dark-mode #toggle-theme {
   background: #444;
   color: #ffffff;
+}
+
+/* Ongoing Work section */
+#ongoing {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+#ongoing ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+#ongoing li::before {
+  content: "• ";
+  color: #0066cc;
+}
+body.dark-mode #ongoing li::before {
+  color: #9bbcff;
 }
